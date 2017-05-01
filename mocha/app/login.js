@@ -1,4 +1,4 @@
-var validator = require('../lib/validator');
+var prototype = require('../lib/prototype');
 
 exports.singin = function (email, password){
 	var email = email;
@@ -29,7 +29,7 @@ exports.validateName  = function(name){
 }
 
 exports.validateEmail  = function(email){
-	if (!validator.isEmail(email)){
+	if (!email.isEmail()){
 		throw "The email is incorrect";
 	}
 	return true;
